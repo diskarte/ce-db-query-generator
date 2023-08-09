@@ -1,0 +1,21 @@
+{
+  "name": "ce-db-query-generator",
+  "version": "1.0.0",
+  "description": "SQL Query Generator for CE DB",
+  "main": "index.js",
+  "scripts": {
+    "generate-cruise-query": "node scripts/cruise-generator.js",
+    "generate-response-query": "node scripts/response-generator.js",
+    "generate-researcher-query": "node scripts/researchers-generator.js",
+    "lint": "npx eslint --fix"
+  },
+  "keywords": [],
+  "author": "Margaux Flores <margaux.flores@outlook.com>",
+  "license": "ISC",
+  "dependencies": {
+    "csv": "6.3.1"
+  },
+  "devDependencies": {
+    "eslint": "8.46.0"
+  }
+}
