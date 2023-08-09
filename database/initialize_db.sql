@@ -393,3 +393,42 @@ VALUES (7,
         '8-5. If you answered "Poor" or "Unacceptable" to any of the questions in this section, please tell us why. If you have any other comments or improvements for life onboard during the cruise, please add them here. Thanks very much for filling out and submitting this evaluation. ',
         '8-5. 本セクション内の設問のいずれかで「やや不満」「不満」と答えられた方は、その理由をお聞かせください。また、船内生活について、その他コメントや改善点等ございましたらご記入ください。',
         false, true);
+
+-- CREATE RESPONDER TABLE
+CREATE TABLE responder (
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+    cruise_id BIGINT REFERENCES cruise,
+    submission_date DATE NOT NULL,
+    name_jp TEXT NOT NULL,
+    name_en TEXT NOT NULL,
+    email TEXT NOT NULL,
+    career_level_id BIGINT REFERENCES career_level,
+    affiliation TEXT NOT NULL,
+    gender_id BIGINT REFERENCES gender,
+    age_group_id BIGINT REFERENCES age_group,
+    nationality TEXT NOT NULL,
+    jamstec_experience BOOLEAN NOT NULL,
+    other_experience BOOLEAN NOT NULL
+);
+
+-- CREATE RESPONSE TABLE
+CREATE TABLE response (
+    id BIGSERIAL PRIMARY KEY NOT NULL,
+    responder_id BIGINT REFERENCES responder,
+    question_id BIGINT REFERENCES question,
+    rating_id BIGINT REFERENCES rating,
+    response_comment TEXT,
+    cruise_id BIGINT REFERENCES cruise
+);
+
+-- CREATE RESEARCHER TABLE
+CREATE TABLE researcher (
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+    cruise_id BIGINT REFERENCES cruise,
+    vessel_id BIGINT REFERENCES vessel,
+    researcher_name TEXT NOT NULL,
+    affiliation TEXT,
+    career_level TEXT,
+    university_name_en TEXT,
+    university_name_jp TEXT
+);
