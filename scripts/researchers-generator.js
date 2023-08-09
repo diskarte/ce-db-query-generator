@@ -17,8 +17,8 @@ fs.createReadStream(csvPath).pipe(parse({ delimiters: ',' , from_line: 2})).on('
 
   const researcherSqlQuery = `INSERT INTO researcher (cruise_id, vessel_id, researcher_name, affiliation, career_level,
                                                       university_name_en, university_name_jp)
-                              VALUES ((SELECT id from cruise WHERE code = ${cruiseCode}),
-                                      (SELECT id FROM vessel WHERE code = ${cruiseVesselCode}), '${name}',
+                              VALUES ((SELECT id from cruise WHERE code = '${cruiseCode}'),
+                                      (SELECT id FROM vessel WHERE code = '${cruiseVesselCode}'), '${name}',
                                       '${affiliation}', '${careerLevel}', '${universityEn}', '${universityJp}');`;
 
   query.push(researcherSqlQuery);
