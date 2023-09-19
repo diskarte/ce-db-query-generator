@@ -163,7 +163,8 @@ CREATE TABLE question
 );
 
 INSERT INTO question (question_category_id, question_en, question_jp, is_rating, is_comment)
-VALUES (1, '2-1. How would you rate the success of this cruise in general?', '2-1. 全般を通じて本航海をどのように評価しますか？',
+VALUES (1, '2-1. How would you rate the success of this cruise in general?',
+        '2-1. 全般を通じて本航海をどのように評価しますか？',
         true, false);
 INSERT INTO question (question_category_id, question_en, question_jp, is_rating, is_comment)
 VALUES (1, '2-2. Were you able to collect the samples/data needed for the research targets of this cruise?',
@@ -171,7 +172,8 @@ VALUES (1, '2-2. Were you able to collect the samples/data needed for the resear
 INSERT INTO question (question_category_id, question_en, question_jp, is_rating, is_comment)
 VALUES (1,
         '2-3. How would you rank the quality of the communication with MarE3, the ship crew, and lab techs before and during the cruise?',
-        '2-3. 航海実施前・航海中を通じてMarE3、船員（運航チームを含む）、観測技術員とのコミュニケーションは十分でしたか？', true, false);
+        '2-3. 航海実施前・航海中を通じてMarE3、船員（運航チームを含む）、観測技術員とのコミュニケーションは十分でしたか？',
+        true, false);
 INSERT INTO question (question_category_id, question_en, question_jp, is_rating, is_comment)
 VALUES (1,
         '2-4. If you answered "Poor" or "Unacceptable" to any of the questions in this section, please tell us why. If you have any other comments or suggestions for improvements regarding the cruise in general, please add them here.',
@@ -257,7 +259,8 @@ VALUES (3,
 INSERT INTO question (question_category_id, question_en, question_jp, is_rating, is_comment)
 VALUES (3,
         '4-9. For the PI: Was MarE3 support, from the proposal submission stage to the cruise implementation stage, sufficient? If you have any comments regarding suggestions for improvement, please add them here.',
-        '4-9. 主席/首席研究者の方へ　課題提案から航海実施に至るまでのMarE3の支援は十分でしたか？コメントや改善点等があればご記入ください。', false,
+        '4-9. 主席/首席研究者の方へ　課題提案から航海実施に至るまでのMarE3の支援は十分でしたか？コメントや改善点等があればご記入ください。',
+        false,
         true);
 INSERT INTO question (question_category_id, question_en, question_jp, is_rating, is_comment)
 VALUES (4, '5-1. How would you rate the lab power supply (capacity and availability of outlets, etc.)?',
@@ -266,7 +269,8 @@ INSERT INTO question (question_category_id, question_en, question_jp, is_rating,
 VALUES (4, '5-2. How would you rate the laboratory layout and equipment (tables, chairs, hoods, etc.)?',
         '5-2. 研究室の固定具の位置や数は十分でしたか？', true, false);
 INSERT INTO question (question_category_id, question_en, question_jp, is_rating, is_comment)
-VALUES (4, '5-3. How would you rate the lighting in the onboard labs?', '5-3. 研究室の明るさは十分でしたか？', true, false);
+VALUES (4, '5-3. How would you rate the lighting in the onboard labs?', '5-3. 研究室の明るさは十分でしたか？', true,
+        false);
 INSERT INTO question (question_category_id, question_en, question_jp, is_rating, is_comment)
 VALUES (4, '5-4. MBES', '5-4. MBES', true, false);
 INSERT INTO question (question_category_id, question_en, question_jp, is_rating, is_comment)
@@ -351,7 +355,8 @@ INSERT INTO question (question_category_id, question_en, question_jp, is_rating,
 VALUES (5, '6-1. Fixed vessel measurement (MBES, ADCP, etc.) equipment operation',
         '6-1. 船体固定観測機器（MBES、ADCPなど）の運用', true, false);
 INSERT INTO question (question_category_id, question_en, question_jp, is_rating, is_comment)
-VALUES (5, '6-2. How would you rate the support from the ship''s crew?', '6-2. 本船クルーからの研究支援はいかがでしたか？', true,
+VALUES (5, '6-2. How would you rate the support from the ship''s crew?',
+        '6-2. 本船クルーからの研究支援はいかがでしたか？', true,
         false);
 INSERT INTO question (question_category_id, question_en, question_jp, is_rating, is_comment)
 VALUES (5,
@@ -365,7 +370,8 @@ INSERT INTO question (question_category_id, question_en, question_jp, is_rating,
 VALUES (6, '7-2. How would you rate the instructions to connect to the onboard network?',
         '7-2. ネットワーク設定方法に関する情報提供は十分でしたか？', true, false);
 INSERT INTO question (question_category_id, question_en, question_jp, is_rating, is_comment)
-VALUES (6, '7-3. How would you rate the onboard email system?', '7-3. 船上Emailの使い勝手はいかがでしたか？', true, false);
+VALUES (6, '7-3. How would you rate the onboard email system?', '7-3. 船上Emailの使い勝手はいかがでしたか？', true,
+        false);
 INSERT INTO question (question_category_id, question_en, question_jp, is_rating, is_comment)
 VALUES (6,
         '7-4. How would you rate the accessibility of the onboard observation data (i.e. could you easily find, access, and download the data)?',
@@ -387,48 +393,70 @@ VALUES (7, '8-2. How would you rate the common facilities (restrooms, showers, l
 INSERT INTO question (question_category_id, question_en, question_jp, is_rating, is_comment)
 VALUES (7, '8-3. How would you rate the meals onboard?', '8-3. 食事の提供内容についてはいかがでしたか？', true, false);
 INSERT INTO question (question_category_id, question_en, question_jp, is_rating, is_comment)
-VALUES (7, '8-4. How would you rate the onboard dining facilities?', '8-4. 食堂設備などについてはいかがでしたか？', true, false);
+VALUES (7, '8-4. How would you rate the onboard dining facilities?', '8-4. 食堂設備などについてはいかがでしたか？', true,
+        false);
 INSERT INTO question (question_category_id, question_en, question_jp, is_rating, is_comment)
 VALUES (7,
         '8-5. If you answered "Poor" or "Unacceptable" to any of the questions in this section, please tell us why. If you have any other comments or improvements for life onboard during the cruise, please add them here. Thanks very much for filling out and submitting this evaluation. ',
         '8-5. 本セクション内の設問のいずれかで「やや不満」「不満」と答えられた方は、その理由をお聞かせください。また、船内生活について、その他コメントや改善点等ございましたらご記入ください。',
         false, true);
 
--- CREATE RESPONDER TABLE
-CREATE TABLE responder (
-    id BIGSERIAL NOT NULL PRIMARY KEY,
-    cruise_id BIGINT REFERENCES cruise,
-    submission_date DATE NOT NULL,
-    name_jp TEXT NOT NULL,
-    name_en TEXT NOT NULL,
-    email TEXT NOT NULL,
-    career_level_id BIGINT REFERENCES career_level,
-    affiliation TEXT NOT NULL,
-    gender_id BIGINT REFERENCES gender,
-    age_group_id BIGINT REFERENCES age_group,
-    nationality TEXT NOT NULL,
-    jamstec_experience BOOLEAN NOT NULL,
-    other_experience BOOLEAN NOT NULL
+-- CREATE CRUISE TABLE
+CREATE TABLE cruise
+(
+    id         BIGSERIAL NOT NULL PRIMARY KEY,
+    code       TEXT      NOT NULL,
+    start_date DATE      NOT NULL,
+    end_date   DATE      NOT NULL,
+    vessel_id  BIGINT REFERENCES vessel
 );
 
--- CREATE RESPONSE TABLE
-CREATE TABLE response (
-    id BIGSERIAL PRIMARY KEY NOT NULL,
-    responder_id BIGINT REFERENCES responder,
-    question_id BIGINT REFERENCES question,
-    rating_id BIGINT REFERENCES rating,
-    response_comment TEXT,
+-- CREATE PROPOSAL TABLE
+CREATE TABLE proposal
+(
+    id        BIGSERIAL NOT NULL PRIMARY KEY,
+    code      TEXT      NOT NULL,
     cruise_id BIGINT REFERENCES cruise
 );
 
+-- CREATE RESPONDER TABLE
+CREATE TABLE responder
+(
+    id                 BIGSERIAL NOT NULL PRIMARY KEY,
+    cruise_id          BIGINT REFERENCES cruise,
+    submission_date    DATE      NOT NULL,
+    name_jp            TEXT      NOT NULL,
+    name_en            TEXT      NOT NULL,
+    email              TEXT      NOT NULL,
+    career_level_id    BIGINT REFERENCES career_level,
+    affiliation        TEXT      NOT NULL,
+    gender_id          BIGINT REFERENCES gender,
+    age_group_id       BIGINT REFERENCES age_group,
+    nationality        TEXT      NOT NULL,
+    jamstec_experience BOOLEAN   NOT NULL,
+    other_experience   BOOLEAN   NOT NULL
+);
+
+-- CREATE RESPONSE TABLE
+CREATE TABLE response
+(
+    id               BIGSERIAL PRIMARY KEY NOT NULL,
+    responder_id     BIGINT REFERENCES responder,
+    question_id      BIGINT REFERENCES question,
+    rating_id        BIGINT REFERENCES rating,
+    response_comment TEXT,
+    cruise_id        BIGINT REFERENCES cruise
+);
+
 -- CREATE RESEARCHER TABLE
-CREATE TABLE researcher (
-    id BIGSERIAL NOT NULL PRIMARY KEY,
-    cruise_id BIGINT REFERENCES cruise,
-    vessel_id BIGINT REFERENCES vessel,
-    researcher_name TEXT NOT NULL,
-    affiliation TEXT,
-    career_level TEXT,
+CREATE TABLE researcher
+(
+    id                 BIGSERIAL NOT NULL PRIMARY KEY,
+    cruise_id          BIGINT REFERENCES cruise,
+    vessel_id          BIGINT REFERENCES vessel,
+    researcher_name    TEXT      NOT NULL,
+    affiliation        TEXT,
+    career_level       TEXT,
     university_name_en TEXT,
     university_name_jp TEXT
 );
